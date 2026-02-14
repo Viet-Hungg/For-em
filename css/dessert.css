@@ -1,0 +1,173 @@
+/* Tổng thể trang web */
+body {
+    background-color: #fce4ec; /* Nền hồng nhạt */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container của lá thư */
+.letter-wrapper {
+    background-color: #fffcf2; /* Màu giấy hơi vàng cũ */
+    width: 95%;
+    max-width: 800px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+    border: 1px solid #eee;
+    /* Hiệu ứng đường kẻ ngang của giấy tập */
+    background-image: linear-gradient(#e1e1e1 1px, transparent 1px);
+    background-size: 100% 35px;
+    line-height: 35px;
+}
+
+/* Tiêu đề và nội dung chữ */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #d81b60;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.date {
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* Phần chọn món ăn */
+.dessert-selection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.dessert-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s;
+}
+
+/* Hiệu ứng khung ảnh Polaroid */
+.photo-frame {
+    background: white;
+    padding: 10px 10px 30px 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transform: rotate(-2deg); /* Xoay nhẹ cho tự nhiên */
+    margin-bottom: 10px;
+}
+
+.dessert-item:nth-child(even) .photo-frame {
+    transform: rotate(2deg);
+}
+
+.photo-frame img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.dessert-item label {
+    font-family: 'Caveat', cursive;
+    font-size: 1.5rem;
+    color: #444;
+    cursor: pointer;
+}
+
+/* Nút bấm kiểu con dấu (Seal) */
+.letter-footer {
+    text-align: right;
+    margin-top: 50px;
+}
+
+.letter-footer p {
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    margin-right: 20px;
+}
+
+.seal-button {
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.3);
+    transition: all 0.3s;
+}
+
+.seal-button:hover {
+    transform: scale(1.1) rotate(-3deg);
+    background-color: #ad1457;
+}
+
+/* Ẩn checkbox mặc định để làm giao diện sạch hơn */
+input[type="checkbox"] {
+    accent-color: #d81b60;
+    transform: scale(1.2);
+    margin-right: 8px;
+}
+/* Container chính của danh sách */
+.text-selection-list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Căn lề trái để trông giống đang viết danh sách trong thư */
+    padding-left: 10%; 
+}
+
+/* Từng dòng lựa chọn */
+.text-item {
+    height: 35px; /* Phải bằng với background-size của dòng kẻ */
+    line-height: 35px; /* Đẩy chữ nằm lên trên dòng kẻ */
+    display: flex;
+    align-items: center;
+}
+
+.text-item label {
+    font-family: 'Caveat', cursive;
+    font-size: 1.8rem; /* Tăng size chữ cho dễ đọc */
+    color: #444;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* Tinh chỉnh checkbox cho tinh tế hơn */
+input[type="checkbox"] {
+    margin-right: 15px;
+    cursor: pointer;
+    accent-color: #d81b60;
+    width: 18px;
+    height: 18px;
+}
+
+/* Hiệu ứng gạch chân khi chọn (tùy chọn) */
+input[type="checkbox"]:checked + span {
+    text-decoration: line-through;
+    color: #888;
+}
+.letter-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 35px; /* phải khớp background-size */
+    padding: 0 40px;
+    color: #222;
+    text-align: justify;
+    letter-spacing: 0.3px;
+}
+
+.letter-body p {
+    margin: 0;
+}
